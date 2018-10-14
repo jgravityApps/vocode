@@ -1,0 +1,633 @@
+/*
+ * Globals
+ */
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+/* Custom default button */
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: #333;
+  text-shadow: none;
+  /* Prevent inheritance from `body` */
+  background-color: #fff;
+  border: .05rem solid #fff;
+}
+
+/*
+ * Base structure
+ */
+html,
+body {
+  height: 100%;
+  background-color: #333;
+}
+
+body {
+  display: -ms-flexbox;
+  display: flex;
+  color: #fff;
+  text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
+}
+
+.cover-container {
+  max-width: 42em;
+}
+
+/*
+ * Header
+ */
+.masthead {
+  margin-bottom: 2rem;
+}
+
+.masthead-brand {
+  margin-bottom: 0;
+}
+
+.nav-masthead .nav-link {
+  padding: .25rem 0;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.5);
+  background-color: transparent;
+  border-bottom: .25rem solid transparent;
+}
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+  border-bottom-color: rgba(255, 255, 255, 0.25);
+}
+
+.nav-masthead .nav-link + .nav-link {
+  margin-left: 1rem;
+}
+
+.nav-masthead .active {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+@media (min-width: 48em) {
+  .masthead-brand {
+    float: left;
+  }
+  .nav-masthead {
+    float: right;
+  }
+}
+
+/*
+ * Cover
+ */
+.cover {
+  padding: 0 1.5rem;
+}
+
+.cover .btn-lg {
+  padding: .75rem 1.25rem;
+  font-weight: 700;
+}
+
+/*
+ * Footer
+ */
+.mastfoot {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.colorKey {
+  color: #333 !important;
+}
+
+.colorTxtInKey {
+  color: #fff !important;
+}
+
+.txtAttension {
+  font-size: 0.7em;
+  margin: 0.5em;
+}
+
+.pd5 {
+  padding: 5px !important;
+}
+
+h1 > i, h2 > i, h3 > i, h4 > i, h5 > i, h6 > i {
+  margin-right: 10px;
+}
+
+div i {
+  margin-right: 5px;
+}
+
+body {
+  overflow: scroll;
+  display: contents;
+}
+
+.btn-outline-primary2:hover, #baseTrackList li a:hover, .closeView:hover, div[id^="page"] .modal-body a:hover {
+  opacity: 0.8 !important;
+  color: #333 !important;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#btnCloseAlert.btn.btn-secondary:hover, .cookie-accept-btn:hover, .cookie-accept-btn.cookie-deny-btn:hover {
+  opacity: 0.8 !important;
+  color: #fff !important;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.navbar-toggler:focus, .nav-link:focus, .btn:focus, .custom-select:focus, .close:focus, .navbar-toggler:active, .nav-link:active, .btn:active, .custom-select:active, .close:active {
+  outline: 0;
+  border-color: initial;
+  box-shadow: initial;
+}
+
+.command, .alert, .cookie-accept-bar {
+  background-color: #484848;
+  color: #fff;
+  font-size: .875rem;
+  line-height: 1.5;
+  padding: 5px 20px;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.displayNone {
+  display: none !important;
+}
+
+#areaDL {
+  padding: 1.5em;
+  background-color: #bbb;
+  margin: 2.0rem 0;
+}
+
+.iconL {
+  font-size: 2.5rem;
+  margin: calc(50% - 1.25rem);
+}
+
+.icon {
+  color: #333;
+}
+
+.iconRec {
+  color: #C3272B;
+}
+
+.iconWhite {
+  color: #fff;
+}
+
+.btnIcon, .btnIcon:hover, .btnIcon:active {
+  font-size: 1.6rem !important;
+  background-color: rgba(0, 0, 0, 0) !important;
+  border: none !important;
+  padding: 0;
+}
+
+.btnIcon:hover {
+  opacity: 0.8 !important;
+}
+
+a:not(.nav-link)[target="_blank"]::after {
+  margin-left: 3px;
+  content: "\f35d";
+  font-family: "Font Awesome 5 Solid";
+  display: inline-block;
+  vertical-align: -1px;
+}
+
+.animFadeInOut {
+  animation: fadeIn 1s 1s forwards infinite ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1.0;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1.0;
+  }
+  to {
+    opacity: 0.4;
+  }
+}
+
+.animRotate {
+  font-size: 2.5rem;
+  margin: calc(50% - 1.25rem);
+  animation: rotate-anime 2s linear infinite;
+}
+
+@keyframes rotate-anime {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes slide-down {
+  from {
+    transform: translateY(-1000px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-up {
+  to {
+    transform: translateY(-1000px);
+  }
+  from {
+    transform: translateY(0);
+  }
+}
+
+.btn-outline-primary2, #baseTrackList li a {
+  color: #333 !important;
+  border-color: #333 !important;
+  padding: 5px !important;
+  background: #fff !important;
+  font-weight: 300 !important;
+}
+
+.mb-4 {
+  margin: 0;
+}
+
+.plus {
+  font-size: 1.8rem;
+  height: 100%;
+  width: 100%;
+}
+
+.plus p {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#baseTrackList li a {
+  color: #333 !important;
+  display: block;
+  padding: 5px 10px !important;
+  text-shadow: none;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+#baseTrackList li a:hover {
+  background-color: #333 !important;
+  color: #fff !important;
+}
+
+#baseTrackList li a:hover > i.icon {
+  color: #fff;
+}
+
+#baseTrackList li a > i {
+  margin-right: 5px;
+}
+
+#viewCountdown {
+  width: 100%;
+  font-size: 3.0rem;
+  position: fixed;
+  z-index: 4;
+}
+
+.bodyBG {
+  background-color: rgba(51, 51, 51, 0.15);
+}
+
+#viewRecTime {
+  width: 100%;
+  height: 100%;
+  display: table;
+  vertical-align: bottom;
+  left: auto;
+  right: 3px;
+  padding: 3px;
+  z-index: 3;
+}
+
+#viewVisibleWav {
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 5;
+  text-align: left;
+  color: #333;
+}
+
+#viewVisibleWav > wave {
+  background-color: #fff;
+  opacity: 0.9;
+}
+
+.closeView {
+  margin: 0 0.5rem;
+  position: absolute;
+  z-index: 6;
+  height: 1.5rem;
+  width: 1.5rem;
+  color: #333;
+}
+
+#recMicInput, .modal-body, #viewVisibleWav {
+  width: 100%;
+  height: 100%;
+}
+
+.bgColorRed {
+  background-color: rgba(195, 39, 43, 0.15) !important;
+}
+
+.indicatorBGDetail {
+  width: 0;
+  height: 0;
+  background-color: rgba(170, 170, 170, 0.15);
+  color: #333;
+  z-index: 9999;
+  position: fixed;
+  display: block;
+}
+
+#btnSettings {
+  margin-right: auto !important;
+}
+
+#viewSettings {
+  overflow: scroll;
+}
+
+.input-group-text {
+  padding: .325rem .35rem;
+  font-size: 0.5rem;
+}
+
+.input-group-text i {
+  margin-right: 5px;
+}
+
+select {
+  font-size: 0.7rem;
+}
+
+.popover {
+  color: #333 !important;
+  font-size: 0.6rem !important;
+}
+
+.popover-header {
+  font-size: 0.6rem !important;
+}
+
+.bs-popover-right {
+  margin-left: 0 !important;
+}
+
+.btn-secondary {
+  background-color: #f7f7f7 !important;
+  border: .05rem solid #f7f7f7 !important;
+}
+
+.btn-sm {
+  font-size: 0.75rem;
+}
+
+.bs-popover-auto[x-placement^=right] .arrow::after, .bs-popover-right .arrow::after {
+  border-right-color: #f7f7f7;
+}
+
+@media (max-width: 575px) {
+  .card {
+    margin: 0 !important;
+  }
+}
+
+.card-header {
+  padding: 0.3rem 0.5rem;
+}
+
+.card-header h4 {
+  overflow: hidden;
+}
+
+.card-body {
+  padding: 0.5rem;
+}
+
+.cover {
+  padding: 0 0.1rem !important;
+}
+
+.container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.notDefinedYet {
+  margin: 0;
+}
+
+.notDefinedYet span {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.btnDropDown {
+  background: #fff url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'><path fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/></svg>") no-repeat right 0.75rem center !important;
+  background-size: 8px 10px !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.btnDropDown .btn-outline-primary2, .btnDropDown #baseTrackList li a, #baseTrackList li .btnDropDown a {
+  background: initial;
+}
+
+.btnDropDown a, .btnDropDown a:hover, .btnDropDown a:focus, .btnDropDown a:active {
+  color: #333;
+  font-size: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+}
+
+.command {
+  position: relative;
+  margin-bottom: 2.0rem;
+}
+
+.command p {
+  font-size: 0.86rem;
+  margin-bottom: 0;
+}
+
+.navbar {
+  padding-top: 0 !important;
+}
+
+.navbar-toggler {
+  margin-top: 0 !important;
+}
+
+.navbar-nav {
+  margin: 0 auto;
+}
+
+@media (min-width: 48em) {
+  .nav-masthead {
+    float: none;
+  }
+}
+
+.col-sm .nav-link {
+  display: inline-block !important;
+}
+
+.modal-header {
+  color: #333 !important;
+  padding: 0.7rem 1rem !important;
+}
+
+.modal-footer {
+  padding: 0.6rem 1rem !important;
+}
+
+.modal-body {
+  overflow: scroll;
+}
+
+div[id^="page"] .modal-body {
+  color: #333 !important;
+  text-shadow: none;
+}
+
+div[id^="page"] .modal-body a {
+  color: #333 !important;
+  text-shadow: none;
+}
+
+div[id^="page"] .modal-body a:hover {
+  color: #333 !important;
+}
+
+.alert {
+  position: absolute;
+  top: 0;
+  animation-duration: .6s;
+  animation-name: slide-down;
+  box-sizing: border-box;
+}
+
+.alert.alert-remove {
+  animation-duration: .6s;
+  animation-name: slide-up;
+}
+
+#btnCloseAlert.btn.btn-secondary {
+  color: #fff !important;
+  background-color: transparent !important;
+  border-color: #fff !important;
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+@keyframes cookie-accept-bar-slide-in {
+  to {
+    transform: translateY(200px);
+  }
+  from {
+    transform: translateY(0);
+  }
+}
+
+@keyframes cookie-accept-bar-slide-out {
+  /*to {
+    transform: translateY(200px);
+  }
+  from {
+    transform: translateY(0);
+  }*/
+}
+
+.cookie-accept-bar {
+  animation-duration: .6s;
+  animation-name: cookie-accept-bar-slide-in;
+  box-sizing: border-box;
+}
+
+.cookie-accept-bar.state-remove {
+  animation-duration: .2s;
+  animation-name: cookie-accept-bar-slide-out;
+}
+
+.cookie-accept-bar p {
+  margin: 1em 0;
+}
+
+.cookie-accept-bar a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.cookie-accept-bar .material-icons {
+  vertical-align: middle;
+  margin-right: .2em;
+}
+
+.cookie-accept-bar p button:first-child, .cookie-accept-bar p .btnDropDown:first-child {
+  margin-right: 1em;
+}
+
+button, .btnDropDown {
+  font-size: 1.0rem;
+  margin-top: 0.5rem;
+  text-shadow: none;
+  overflow: auto;
+  text-overflow: ellipsis;
+}
+
+button > i, .btnDropDown > i {
+  margin-right: 5px;
+}
+
+.cookie-accept-btn {
+  display: inline-block;
+  color: #fff !important;
+  background-color: rgba(51, 51, 51, 0.7) !important;
+  border-color: #fff !important;
+  transition: .2s ease-out;
+}
+
+.cookie-accept-btn.cookie-deny-btn {
+  background-color: transparent !important;
+  border-color: #fff !important;
+}

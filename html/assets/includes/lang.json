@@ -1,0 +1,224 @@
+{
+  "appVer": "0.9.1",
+  "appName": "vocode",
+  "appURL": "https://vocode-app.herokuapp.com/",
+  "description":
+  {
+    "en": "morph your voice and a wav-file to make signature sound.",
+    "ja": "声とwavファイルをモーフィングしてオリジナル音声を作成しよう"
+  },
+  "nav":
+  {
+    "about":
+    {
+      "en": "about",
+      "ja": "about"
+    },
+    "support":
+    {
+      "en": "support",
+      "ja": "サポート"
+    },
+    "tweet":
+    {
+      "en": "<i class=\"fab fa-twitter iconWhite\"></i>",
+      "ja": "<i class=\"fab fa-twitter iconWhite\"></i>"
+    },
+    "facebook":
+    {
+      "en": "<i class=\"fab fa-facebook-f iconWhite\"></i>",
+      "ja": "<i class=\"fab fa-facebook-f iconWhite\"></i>"
+    }
+  },
+  "voiceTrack":
+  {
+    "title":
+    {
+      "en": "voice track",
+      "ja": "声のトラック"
+    },
+    "btnRecYourVoice":
+    {
+      "en": "record your voice",
+      "ja": "声を録音"
+    },
+    "btnUseSampleVoice":
+    {
+      "en": "use sample voice",
+      "ja": "サンプルボイスを使う"
+    }
+  },
+  "recordYourVoice":
+  {
+    "title":
+    {
+      "en": "record your voice",
+      "ja": "声を録音"
+    },
+    "closeConfirmWavsurfer":
+    {
+      "en": "are you sure ?",
+      "ja": "閉じて良いですか？"
+    }
+  },
+  "settings":
+  {
+    "title":
+    {
+      "en": "settings",
+      "ja": "設定"
+    },
+    "inputDevice":
+    {
+      "en": "Input Device",
+      "ja": "インプットデバイス"
+    },
+    "chooseDevice":
+    {
+      "en": "choose device",
+      "ja": "デバイスを選択"
+    }
+  },
+  "baseTrack":
+  {
+    "title":
+    {
+      "en": "base track",
+      "ja": "基礎のトラック"
+    },
+    "btnSelectSound":
+    {
+      "en": "select sound",
+      "ja": "サウンドを選択"
+    }
+  },
+  "btnVocode":
+  {
+    "en": "vocode",
+    "ja": "ボコード"
+  },
+  "footer":
+  {
+    "tweet":
+    {
+      "en": "<i class=\"fab fa-twitter iconWhite\"></i>",
+      "ja": "<i class=\"fab fa-twitter iconWhite\"></i>"
+    },
+    "facebook":
+    {
+      "en": "<i class=\"fab fa-facebook-f iconWhite\"></i>",
+      "ja": "<i class=\"fab fa-facebook-f iconWhite\"></i>"
+    }
+  },
+  "notDefined":
+  {
+    "en": "not defined",
+    "ja": "未設定"
+  },
+  "aboutBody":
+  {
+    "en": "vocode is an application that morphs a voice and a wav-file of list.<br><br>Since we plan to add various functions in the future, please continue your favors.<br><br>Please use Twitter for the message.",
+    "ja": "vocodeは、声と音声ファイルをモーフィングするアプリです。<br><br>今後、様々な機能を追加してゆく予定ですので応援よろしくお願いします。<br><br>メッセージ等はツイッターでお願いします。"
+  },
+  "supportBody":
+  {
+    "en": "soon available.",
+    "ja": "準備しています。"
+  },
+  "downloadBody":
+  {
+    "leadTxt":
+    {
+      "en": "we provide the desktop app that is available the recording function as the full version application.",
+      "ja": "録音機能が使えるフルバージョンは、デスクトップアプリで提供しています。"
+    },
+    "requiredTxt":
+    {
+      "en": "recommended system requirements: Mac OSX 10.13, google chrome",
+      "ja": "推奨システム要件：Mac OSX 10.13, google chrome"
+    },
+    "versionTxt":
+    {
+      "en": "version: ",
+      "ja": "バージョン："
+    },
+    "note":
+    {
+      "en": "if the app did not launch, please try below command-line on Terminal app.",
+      "ja": "アプリが動かない場合はターミナルで以下を実行してください。"
+    },
+    "command": "<div class=\"command\"><p>brew update<br>brew install libsndfile<br>brew install portaudio<br>brew link --overwrite portaudio<br>pip install pyaudio</p></div>"
+  },
+  "license":
+  {
+    "en": "the software is distributed with the Affero GPL license (http://www.gnu.org/licenses/agpl-3.0.en.html), the sounds in this software are released under Creative Commons Attribution 4.0 (CC BY 4.0) license (http://creativecommons.org/licenses/by/4.0/). frame-works, libraries in this software are used under its each license.",
+    "ja": "the software is distributed with the Affero GPL license (http://www.gnu.org/licenses/agpl-3.0.en.html), the sounds in this software are released under Creative Commons Attribution 4.0 (CC BY 4.0) license (http://creativecommons.org/licenses/by/4.0/). frame-works, libraries in this software are used under its each license."
+  },
+  "messages":
+  {
+    "unsetTrack":
+    {
+      "en": "unset.",
+      "ja": "選択されていません"
+    },
+    "filenotfound":
+    {
+      "en": "track file is not found.",
+      "ja": "トラックファイルが見つかりません"
+    },
+    "notAllowRec":
+    {
+      "en": "the recording function is available on desktop application.<br>",
+      "ja": "録音機能は、デスクトップアプリでご利用いただけます。<br>"
+    },
+    "openPageDL":
+    {
+      "en": "go to desktop app download page.",
+      "ja": "デスクトップ版アプリダウンロードページへ"
+    }
+  },
+  "meta":
+  {
+    "description":
+    {
+      "en": "vocode is an app that morphs your voice and a wav-file of list to make signature sound.",
+      "ja": "アプリ「vocode」で、声とwavファイルをモーフィングしてオリジナル音声を作成しよう"
+    }
+  },
+  "sns":
+  {
+    "title":
+    {
+      "en": "voice morhphing app: vocode",
+      "ja": "声をモーフィングするアプリ「vocode」"
+    },
+    "description":
+    {
+      "en": "morph your voice and wav-file to make signature sound.",
+      "ja": "声とwavファイルをモーフィングしてオリジナル音声を作成しよう"
+    }
+  },
+  "GDPR":
+  {
+    "description":
+    {
+      "en": "We use cookies to optimise site functionality and to display personalized ads on this site.",
+      "ja": "このサイトではトラフィックの分析と広告のパーソナライズを目的として、Cookieを使用してもよろしいでしょうか？"
+    },
+    "policy":
+    {
+      "en": "Confirm Privacy & Terms.",
+      "ja": "プライバシーポリシー"
+    },
+    "btnAccept":
+    {
+      "en": "Accept",
+      "ja": "はい"
+    },
+    "btnDeny":
+    {
+      "en": "Deny",
+      "ja": "いいえ"
+    }
+  }
+}

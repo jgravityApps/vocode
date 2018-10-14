@@ -1,0 +1,604 @@
+@charset "utf-8";
+
+// import
+@import "cover";
+
+
+//     custom css     //
+
+//  colors  //
+$colorKey: #333;
+$colorTxt: #fff;
+$colorRed: #C3272B;
+$colorBlack: #000;
+$colorGray: #aaa;
+$colorLightGray: #484848;
+$colorLighterGray: #bbb;
+
+
+.colorKey {
+  color: $colorKey !important;
+}
+.colorTxtInKey {
+  color: $colorTxt !important;
+}
+
+@function getRGBA($colorBase, $alphaWant) {
+  @return rgba($color: $colorBase, $alpha: $alphaWant);
+}
+
+//  layouts  //
+// text
+$fontWeightMid: 300;
+
+.txtAttension {
+  font-size: 0.7em;
+  margin: 0.5em;
+}
+
+// button
+$widthBtnPlayer: 20px;
+$heightBtnPlayer: 24px;
+$pause-border: 7px;
+
+.pd5 {
+  padding: 5px !important;
+}
+
+//  styles  //
+h1,h2,h3,h4,h5,h6 {
+  &>i {
+    margin-right: 10px;
+  }
+}
+
+div {
+  & i{
+    margin-right: 5px;
+  }
+}
+
+body {
+  overflow: scroll;
+  display: contents;
+}
+
+%hoverStyle {
+  opacity: 0.8 !important;
+  color: $colorKey !important;
+  text-decoration: none;
+  cursor: pointer;
+}
+%hoverStyleLight {
+  opacity: 0.8 !important;
+  color: $colorTxt !important;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+%outline0 {
+  outline: 0;
+  border-color: initial;
+  box-shadow: initial;
+}
+
+%barStyle {
+  background-color: getRGBA($colorLightGray, 1.0s);
+  color: $colorTxt;
+  font-size: .875rem;
+  line-height: 1.5;
+  padding: 5px 20px;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.displayNone {
+  display: none !important;
+}
+
+#areaDL {
+  padding: 1.5em;
+  background-color: $colorLighterGray;
+  margin: 2.0rem 0;
+}
+
+
+//  icons  //
+.iconL {
+  font-size: 2.5rem;
+  margin: calc(50% - 1.25rem);
+}
+.icon {
+  color: $colorKey;
+}
+.iconRec {
+  color: $colorRed;
+}
+.iconWhite {
+  color: $colorTxt;
+}
+
+.btnIcon {
+  font-size: 1.6rem !important;
+  background-color: getRGBA($colorBlack, 0.0) !important;
+  border: none !important;
+  padding: 0;
+
+  &:hover {
+    @extend .btnIcon;
+    opacity: 0.8 !important;
+  }
+  &:active {
+    @extend .btnIcon;
+  }
+}
+
+a:not(.nav-link)[target="_blank"]::after{
+  margin-left: 3px;
+  content: "\f35d";
+  font-family: "Font Awesome 5 Solid";
+  display: inline-block;
+  vertical-align: -1px;
+}
+
+//  animations  //
+.animFadeInOut {
+  animation: fadeIn 1s 1s forwards infinite ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity:0.5;
+  }
+  to {
+      opacity:1.0;
+  }
+}
+@keyframes fadeOut {
+  from {
+      opacity:1.0;
+  }
+  to {
+      opacity:0.4;
+  }
+}
+
+.animRotate {
+  font-size: 2.5rem;
+  margin: calc(50% - 1.25rem);
+  animation: rotate-anime 2s linear infinite;
+}
+@keyframes rotate-anime {
+  0%  {transform: rotate(0);}
+  100%  {transform: rotate(360deg);}
+}
+
+
+@keyframes slide-down {
+  from {
+    transform: translateY(-1000px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes slide-up {
+  to {
+    transform: translateY(-1000px);
+  }
+  from {
+    transform: translateY(0);
+  }
+}
+
+
+//  elements  //
+.btn-outline-primary2 {
+  color: $colorKey !important;
+  border-color: $colorKey !important;
+  padding: 5px !important;
+  background: $colorTxt !important;
+  font-weight: $fontWeightMid !important;
+
+  &:hover{
+    @extend %hoverStyle;
+  }
+}
+
+.mb-4 {
+  margin: 0;
+}
+.plus {
+  font-size: 1.8rem;
+  height: 100%;
+  width: 100%;
+
+  & p{
+    width: 100%;
+    height: 100%;
+    //padding: 10px !important;
+    display: inline-block;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+#baseTrackList {
+  & li a{
+    @extend .btn-outline-primary2;
+    color: $colorKey !important;
+    display: block;
+    padding: 5px 10px !important;
+    text-shadow: none;
+    text-overflow: ellipsis;
+    max-width: 100%;
+
+    &:hover{
+      @extend %hoverStyle;
+      background-color: $colorKey !important;
+      color: $colorTxt !important;
+
+      & > i.icon {
+        color: $colorTxt;
+      }
+    }
+
+    & > i {
+      margin-right: 5px;
+    }
+  }
+}
+
+// view count down for rec
+#viewCountdown {
+  width: 100%;
+  font-size: 3.0rem;
+  position: fixed;
+  z-index: 4;
+}
+
+.bodyBG {
+  background-color: getRGBA($colorKey, 0.15);
+}
+
+
+#viewRecTime {
+  width: 100%;
+  height: 100%;
+  display: table;
+  vertical-align: bottom;
+  left: auto;
+  right: 3px;
+  padding: 3px;
+  z-index: 3;
+}
+
+#viewVisibleWav {
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 5;
+  text-align: left;
+  color: $colorKey;
+  &>wave {
+    background-color: $colorTxt;
+    opacity: 0.9;
+  }
+}
+.closeView {
+//  content: "\0d7";
+  margin: 0 0.5rem;
+  position: absolute;
+  z-index: 6;
+  height: 1.5rem;
+  width: 1.5rem;
+  color: $colorKey;
+  &:hover {
+    @extend %hoverStyle;
+  }
+}
+
+
+#recMicInput, .modal-body, #viewVisibleWav {
+  width: 100%;
+  height: 100%;
+}
+
+.bgColorRed {
+  //background-color: $colorRed !important;
+  background-color: getRGBA($colorRed, 0.15) !important;
+}
+
+.indicatorBGDetail {
+  width: 0;
+  height: 0;
+  background-color: getRGBA($colorGray, 0.15);
+  color: $colorKey;
+  z-index: 9999;
+  position: fixed;
+  display: block;
+}
+
+#btnSettings{
+  margin-right: auto !important;
+}
+
+#viewSettings {
+  overflow: scroll;
+}
+
+.input-group-text {
+  padding: .325rem .35rem;
+  font-size: 0.5rem;
+  & i {
+    margin-right: 5px;
+  }
+}
+
+select {
+  font-size: 0.7rem;
+}
+
+
+// confirmation view
+.popover {
+  color: $colorKey !important;
+  font-size: 0.6rem !important;
+}
+.popover-header {
+  font-size: 0.6rem !important;
+}
+.bs-popover-right{
+  margin-left: 0 !important;
+}
+.btn-secondary {
+  background-color: #f7f7f7 !important;
+  border: .05rem solid #f7f7f7 !important;
+}
+.btn-sm {
+  font-size: 0.75rem;
+}
+.bs-popover-auto[x-placement^=right] .arrow::after, .bs-popover-right .arrow::after {
+  border-right-color: #f7f7f7;
+}
+
+@media (max-width: 575px) {
+  .card {
+    margin: 0 !important;
+  }
+}
+
+// override style
+.card-header{
+  padding: 0.3rem 0.5rem;
+
+  & h4 {
+    overflow: hidden;
+  }
+}
+
+.card-body {
+  padding: 0.5rem;
+}
+
+.cover {
+  padding: 0 0.1rem !important;
+}
+.container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+// other
+.notDefinedYet {
+  margin:0;
+  & span {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+.btnDropDown {
+  @extend button;
+
+  background: #fff url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'><path fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/></svg>") no-repeat right .75rem center !important;
+  background-size: 8px 10px !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  & .btn-outline-primary2 {
+    background: initial;
+  }
+
+  & a, & a:hover, & a:focus, & a:active {
+    color: $colorKey;;
+    font-size: inherit;
+    font-weight: inherit;
+    text-decoration: none;
+  }
+}
+
+.command {
+  @extend %barStyle;
+  position: relative;
+  margin-bottom: 2.0rem;
+  & p {
+    font-size: 0.86rem;
+    margin-bottom: 0;
+  }
+}
+
+
+//  navigations //
+.navbar {
+  padding-top: 0 !important;
+}
+
+.navbar-toggler {
+  margin-top: 0 !important;
+}
+
+.navbar-nav {
+  margin: 0 auto;
+}
+
+@media (min-width: 48em) {
+  .nav-masthead {
+    float: none;
+  }
+}
+
+.navbar-toggler, .nav-link, .btn, .custom-select, .close {
+  &:focus {
+    @extend %outline0;
+  }
+  &:active {
+    @extend %outline0;
+  }
+}
+
+.col-sm .nav-link {
+  display: inline-block !important;
+}
+
+
+//  modals  //
+.modal-header {
+  color: $colorKey !important;
+  padding: 0.7rem 1rem !important;
+}
+.modal-footer {
+  padding: 0.6rem 1rem !important;
+}
+.modal-body {
+  overflow: scroll;
+}
+
+div[id^="page"] .modal-body {
+  color: $colorKey !important;
+  text-shadow: none;
+  & a {
+    color: $colorKey !important;
+    text-shadow: none;
+    &:hover {
+      color: $colorKey !important;
+      @extend %hoverStyle;
+    }
+  }
+}
+
+// alert
+.alert {
+  @extend %barStyle;
+  position: absolute;
+  top: 0;
+
+  animation-duration: .6s;
+  animation-name: slide-down;
+  box-sizing: border-box;
+  
+  &.alert-remove {
+    animation-duration: .6s;
+    animation-name: slide-up;
+  }
+}
+#btnCloseAlert.btn.btn-secondary {
+  color: $colorTxt !important;
+  background-color: transparent !important;
+  border-color: $colorTxt !important;
+  max-width: 100%;
+  margin-bottom: 10px;
+
+  &:hover {
+    @extend %hoverStyleLight;
+  }
+}
+
+
+
+//      cookie acception      //
+
+// animation for bar
+@keyframes cookie-accept-bar-slide-in {
+  to {
+    transform: translateY(200px);
+  }
+  from {
+    transform: translateY(0);
+  }
+}
+@keyframes cookie-accept-bar-slide-out {
+  /*to {
+    transform: translateY(200px);
+  }
+  from {
+    transform: translateY(0);
+  }*/
+}
+
+// bar style
+.cookie-accept-bar {
+  @extend %barStyle;
+  animation-duration: .6s;
+  animation-name: cookie-accept-bar-slide-in;
+  box-sizing: border-box;
+  
+  &.state-remove {
+    animation-duration: .2s;
+    animation-name: cookie-accept-bar-slide-out;
+  }
+
+  & p {
+  margin: 1em 0;
+  }
+
+  & a {
+    color: inherit;
+    text-decoration: underline;
+  }
+
+  & .material-icons {
+    vertical-align: middle;
+    margin-right: .2em;
+  }
+
+  & p button:first-child {
+    margin-right: 1em;
+  }
+}
+
+// buttons
+button {
+  font-size: 1.0rem;
+  margin-top: 0.5rem;
+  text-shadow: none;
+  overflow: auto;
+  text-overflow: ellipsis;
+  & > i {
+    margin-right: 5px;
+  }
+}
+
+.cookie-accept-btn {
+  display: inline-block;
+  color: $colorTxt !important;
+  background-color: getRGBA($colorKey , 0.7) !important;
+  border-color: $colorTxt !important;
+  transition: .2s ease-out;
+  &:hover {
+    @extend %hoverStyleLight;
+  }
+
+  &.cookie-deny-btn {
+    background-color: transparent !important;
+    border-color: $colorTxt !important;
+    &:hover {
+      @extend %hoverStyleLight;
+    }
+  }
+}

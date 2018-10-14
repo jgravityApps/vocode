@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="morph your voice and wav-file to make signature sound.">
+    <meta name="author" content="J.G.ravity">
+
+    <title>vocode</title>
+
+    <!-- Documentations -->
+    <link rel="apple-touch-icon" href="/assets/images/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="assets/images/favicons/favicon.ico">
+    <link rel="manifest" href="/assets/includes/manifest.json">
+    <meta name="msapplication-config" content="/assets/images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#333">
+
+    <!-- css, js -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <link href="/assets/css/customAll.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/solid.css" integrity="sha384-wnAC7ln+XN0UKdcPvJvtqIH3jOjs9pnKnq9qX68ImXvOGz2JuFoEiCjT8jyZQX2z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/regular.css" integrity="sha384-zkhEzh7td0PG30vxQk1D9liRKeizzot4eqkJ8gB3/I+mZ1rjgQk+BSt2F6rT2c+I" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/brands.css" integrity="sha384-nT8r1Kzllf71iZl81CdFzObMsaLOhqBU1JD2+XoAALbdtWaXDOlWOZTR4v1ktjPE" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css" integrity="sha384-HbmWTHay9psM8qyzEKPc8odH4DsOuzdejtnr+OFtDmOcIVnhgReQ4GZBH7uwcjf6" crossorigin="anonymous">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@JGravityApps">
+    <meta name="twitter:creator" content="@JGravityApps">
+    <meta name="twitter:title" content="voice morhphing app: vocode">
+    <meta name="twitter:description" content="morph your voice and wav file of list to make signature sound.">
+    <meta name="twitter:image" content="https://vocode-app.herokuapp.com/assets/images/social.png">
+    
+    <!-- Facebook -->
+    <meta property="og:url" content="https://vocode-app.herokuapp.com/">
+    <meta property="og:title" content="voice morhphing app: vocode">
+    <meta property="og:description" content="morph your voice and wav file of list to make signature sound.">
+    <meta property="og:type" content="product">
+    <meta property="og:image" content="https://vocode-app.herokuapp.com/assets/images/social.png">
+    <meta property="og:image:secure_url" content="https://vocode-app.herokuapp.com/assets/images/social.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1202">
+    <meta property="og:image:height" content="666">
+
+  </head>
+
+  <body class="text-center">
+
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-4">
+        <div class="inner">
+          <nav class="navbar navbar-expand-md nav-masthead justify-content-center navbar-dark">
+            <a class="navbar-brand" href="/index.html"><img src="/assets/images/logo.png" width="30" height="30" srcset="/assets/images/logo@2x.png 2.0x, /assets/images/logo@3x.png 3x, /assets/images/logo@4x.png 4x" alt="" id="logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Togglenavigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" data-toggle="modal" data-target="#pageAboutApp" href="#">about</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" data-toggle="modal" data-target="#pageSupport" href="#">support</a>
+                </li>
+                <li class="nav-item active displayNone">
+                    <a class="nav-link" data-toggle="modal" data-target="#pageDownload" href="#">download</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-twitter" href="#" target="_blank"><i class="fab fa-twitter iconWhite"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-facebook" href="#" target="_blank"><i class="fab fa-facebook-f iconWhite"></i></a>
+                </li>
+              </ul>
+            </div>
+            </nav>
+        </div>
+      </header>
+
+      <main role="main" class="inner cover">
+        <h1 class="cover-heading">vocode</h1>
+        <p id="descMain" class="lead">morph your voice and wav file to make signature sound.</p>
+
+        <div class="container">
+          <div class="card-deck mb-3 text-center">
+            <div class="card mb-4 box-shadow">
+              <div class="card-header">
+                <h4 class="my-0 font-weight-normal colorKey">voice track</h4>
+              </div>
+
+              <div class="card-body">
+                
+                <!-- player -->
+                <p class="notDefinedYet" notdefined="01"><span>not defined</span></p>
+                <div class="btnBack0 btn btnIcon displayNone" backTo0="01"><i class="fas fa-step-backward icon"></i></div>
+                <div class="btnPlay btn btnIcon displayNone" playWave="01"><i class="fas fa-play-circle icon"></i><i class="fas fa-pause-circle displayNone"></i></div>
+                <div id="viewVisibleWav01"></div>
+
+                <!-- Button trigger modal rec your voice -->
+                <button id="modalRecYourVoice" type="button" class="btn btn-block btn-outline-primary2" data-toggle="modal" data-target="#recModal"><i class="fas fa-microphone-alt icon"></i>record your voice</button>
+                <!-- record your voice modal -->
+                <div class="modal" id="recModal" tabindex="-1">
+                  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title"><i class="fas fa-microphone-alt"></i>record your voice</h5>
+                        <button type="button" class="close cancelRecYrVoic" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <div id="viewCountdown"></div>
+                        <div><canvas id="recMicInput"></canvas></div>
+                        <div id="viewRecTime"></div>
+                        <div id="viewVisibleWav"><div id="closeVisibleWav" class="closeView" data-toggle="confirmation" data-placement="right">&times;</div></div>
+                      </div>
+                      <div class="modal-footer">
+                        <div id="btnSettings" class="btn btnIcon" data-toggle="modal" data-target="#settingsModal"><i class="fas fa-cogs icon"></i></div>
+                        <div id="btnBackward" class="btn btnIcon"><i class="fas fa-step-backward icon"></i></div>
+                        <div id="btnPlayReced" class="btn btnIcon disabled"><i class="fas fa-play-circle icon"></i><i class="fas fa-pause-circle displayNone"></i></div>
+                        <div id="recordYourVoice" class="btn btn-primary btnIcon"><i class="fas fa-circle iconRec"></i><i class="fas fa-stop-circle iconRec displayNone"></i></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- settings view modal -->
+                <div class="modal" id="settingsModal" tabindex="-1">
+                    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title"><i class="fas fa-cogs"></i>settings</h5>
+                          <button type="button" class="close cancelRecYrVoic" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                            <div id="viewSettings">
+                                <h6 class="colorKey text-left"><i class="fas fa-microphone"></i>Input Device</h6>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                      <label class="input-group-text" for="inputList">Chose device</label>
+                                    </div>
+                                    <select class="custom-select" id="inputList" name="nameInputList"></select>
+                                </div>
+                                <!-- h6 class="colorKey text-left"><i class="fas fa-save"></i>Output Device</h6>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                      <span class="input-group-text" id="inputGroupFileAddon01">Output path</span>
+                                    </div>
+                                    <select class="custom-select" id="inputGroupSelect01">
+                                      <option selected>Choose...</option>
+                                      <option value="1">One</option>
+                                      <option value="2">Two</option>
+                                      <option value="3">Three</option>
+                                    </select>
+                                </div -->
+                              </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button id="btnCancelSettings" type="button" class="btn btn-secondary" data-dismiss="modal">close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                <button id="selectSampleVoice" type="button" class="btn btn-block btn-outline-primary2"><i class="fas fa-frog icon"></i>use sample voice</button>
+              </div>
+            </div>
+            <div class="">
+              <div class="plus"><p>+</p></div>
+            </div>
+            <div class="card mb-4 box-shadow">
+              <div class="card-header">
+                <h4 class="my-0 font-weight-normal colorKey">base track</h4>
+              </div>
+              <div class="card-body">
+
+                <!-- player -->
+                <p class="notDefinedYet" notdefined="02"><span>not defined</span></p>
+                <div class="btnBack0 btn btnIcon displayNone" backTo0="02"><i class="fas fa-step-backward icon"></i></div>
+                <div class="btnPlay btn btnIcon displayNone" playWave="02"><i class="fas fa-play-circle icon"></i><i class="fas fa-pause-circle displayNone"></i></div>
+                <div id="viewVisibleWav02"></div>
+
+                <div id="btnBaseTrackList" class="btnDropDown btn btn-block btn-outline-primary2" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="far fa-file-audio"></i>select sound</div>
+                <ul id="baseTrackList" class="dropdown-menu"></ul>
+              </div>
+            </div>
+          </div>
+
+          <button id="doVocode" type="button" class="btn btn-lg btn-block btn-outline-primary2"><i class="fab fa-creative-commons-sampling icon"></i>vocode!</button>
+          <!-- player -->
+          <p class="notDefinedYet displayNone" notdefined="03"><span></span></p>
+          <div class="btnBack0 btn btnIcon displayNone" backTo0="03"></div>
+          <div class="btnPlay btn btnIcon displayNone" playWave="03"></div>
+          <div id="viewVisibleWav03"></div>
+          <div class="w-100 p-3 dl displayNone" dl="03"><a href="#" download=""><i class="fas fa-download"></i>download</a></div>
+      </main>
+
+      <footer class="mastfoot mt-4">
+        <div class="inner">
+          <div class="gAd"></div>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm"><a class="nav-link nav-twitter" href="#" target="_blank"><i class="fab fa-twitter"></i></a></div>
+              <div class="col-sm"><a class="nav-link nav-facebook" href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></div>
+            </div>
+          </div>
+          <div id="viewCookieAcceptBar"></div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- about app page -->
+    <div class="modal fade" id="pageAboutApp" tabindex="-1" role="dialog" aria-labelledby="pageAboutAppTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="pageAboutAppTitle">about</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p id="pageAboutAppBody" class="text-left"></p>
+            <div class="gAd"></div>
+            <div class="row">
+              <div class="col-sm"><a class="nav-link nav-twitter" href="#" target="_blank"><i class="fab fa-twitter"></i></a></div>
+              <div class="col-sm"><a class="nav-link nav-facebook" href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></div>
+              <div class="col-sm"><a class="nav-link" data-toggle="modal" data-target="#pageSupport" href="#">support</a></div>
+            </div>
+            <hr>
+            <div id="license" class="txtAttension text-left"></div>
+          </div>
+          <div class="modal-footer">
+            <button id="btnClosePageAboutApp" type="button" class="btn btn-secondary" data-dismiss="modal">close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- download page -->
+    <div class="modal fade" id="pageDownload" tabindex="-1" role="dialog" aria-labelledby="pageDownloadTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="pageDownloadTitle">download</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div id="pageDownloadBody" class="text-left"></div>
+            <div class="gAd"></div>
+            <div class="row">
+              <div class="col-sm"><a class="nav-link nav-twitter" href="#" target="_blank"><i class="fab fa-twitter"></i></a></div>
+              <div class="col-sm"><a class="nav-link nav-facebook" href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></div>
+              <div class="col-sm"><a class="nav-link" data-toggle="modal" data-target="#pageSupport" href="#">support</a></div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button id="btnClosePageDownload" type="button" class="btn btn-secondary" data-dismiss="modal">close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- support page -->
+    <div class="modal fade" id="pageSupport" tabindex="-1" role="dialog" aria-labelledby="pageSupportTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="pageSupportTitle">support</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p id="pageSupportBody" class="text-left"></p>
+            <div class="row">
+              <div class="col-sm"><a class="nav-link nav-twitter" href="#" target="_blank"><i class="fab fa-twitter"></i></a></div>
+              <div class="col-sm"><a class="nav-link nav-facebook" href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button id="btnClosePageSupport" type="button" class="btn btn-secondary" data-dismiss="modal">close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- alert -->
+    <div class="alert displayNone" role="alert"></div>
+
+    <script type="text/javascript" src="/assets/js/reconnecting-websocket.min.js"></script>
+    <script type="text/javascript" src="/assets/js/eel.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="/assets/js/jquery.cookie.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+    <script src="/assets/js/bootstrap-confirmation.min.js"></script>
+    <script src="/assets/js/dsp.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.2.3/wavesurfer.min.js"></script>
+    <script src="/assets/js/custom.min.js"></script>
+
+  </body>
+</html>
